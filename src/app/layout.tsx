@@ -33,7 +33,7 @@ export default function RootLayout({
               <SidebarInset>
                   <header className="flex h-16 shrink-0 items-center gap-2 bg-blue-accent">
                       <div className="flex items-center gap-2 px-3 text-white-primary">
-                          <SidebarTrigger />
+                          <SidebarTrigger className="hover:bg-blue-foreground hover:text-white active:bg-white-accent active:text-black"/>
                           <Separator orientation="vertical" className="mr-2 h-4" />
                           <p className="font-medium text-lg">Build your time!</p>
                       </div>
