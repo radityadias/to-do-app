@@ -116,6 +116,14 @@
   --sidebar-accent-foreground: hsl(240 4.8% 95.9%);
   --sidebar-border: hsl(240 3.7% 15.9%);
   --sidebar-ring: hsl(217.2 91.2% 59.8%);
+
+  /* Custom Colors */
+  --white-primary: #0F0C05;
+  --white-foreground: #2A2110;
+  --white-accent: #4E3610;
+  --blue-primary: #75511F;
+  --blue-foreground: #9C7134;
+  --blue-accent: #C6A779;
 }
 
 @theme {
@@ -125,6 +133,10 @@
   --color-blue-primary: var(--blue-primary);
   --color-blue-foreground: var(--blue-foreground);
   --color-blue-accent: var(--blue-accent);
+}
+
+* {
+  @apply transition-colors duration-200 ease-in-out;
 }
 
 @layer base {

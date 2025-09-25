@@ -19,44 +19,26 @@ import {
 const data = {
   navMain: [
     {
-      title: "Getting Started",
+      title: "Home",
+      url: "#",
+    },
+    {
+      title: "Tasks",
       url: "#",
       items: [
         {
-          title: "Installation",
+          title: "Today",
           url: "#",
           isActive: true,
         },
         {
-          title: "Project Structure",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Building Your Application",
-      url: "#",
-      items: [
-        {
-          title: "Routing",
+          title: "Tomorrow",
           url: "#",
         },
         {
-          title: "Data Fetching",
+          title: "Upcomming",
           url: "#",
         },
-        {
-          title: "Rendering",
-          url: "#",
-        },
-        {
-          title: "Caching",
-          url: "#",
-        },
-        {
-          title: "Styling",
-          url: "#",
-        }
       ],
     },
   ],
