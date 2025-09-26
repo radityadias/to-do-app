@@ -5,7 +5,7 @@ import { ButtonDarkMode } from "@/components/app-headers/button-dark-mode";
 
 export function AppHeader() {
     return (
-        <header className="flex h-16 shrink-0 items-center gap-2 border-b">
+        <header className="flex h-16 shrink-0 items-center gap-2 border-b border-primary-foreground">
             <div className="flex items-center justify-between gap-2 px-3 text-white-primary w-full">
                 <div className="flex items-center gap-2">
                     <SidebarTrigger className="text-text-primary hover:bg-primary-accent hover:text-white active:bg-primary-foreground "/>

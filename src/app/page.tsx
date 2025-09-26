@@ -1,5 +1,7 @@
-import { PlusIcon } from "lucide-react";
+import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+
+import { Calendar, Bell } from "lucide-react";
 
 const data = [
   {
@@ -115,8 +117,8 @@ export default function Home() {
   const currentDate = new Date().toDateString();
 
   return (
-   <>
-     <div className="flex flex-col justify-center items-start gap-2">
+   <div className="space-y-3">
+     <div className="flex flex-col justify-center gap-1">
        <div className="flex gap-2 items-center">
          <svg width="32px" height="32px" viewBox="0 0 1024 1024" className="icon" version="1.1"
               xmlns="http://www.w3.org/2000/svg" fill="#000000">
@@ -142,6 +144,26 @@ export default function Home() {
 
        <p className="text-xs text-text-primary/50">{currentDate}</p>
      </div>
-   </>
+
+     <div className="flex flex-col justify-center items-start">
+       <div className="flex flex-row justify-start items-center w-full px-3 py-2 h-12 gap-3 bg-surface-secondary rounded-t-sm">
+         <button className="rounded-full w-4 h-4 bg-transparent ring-1 ring-text-primary/50"/>
+         <Input placeholder="Add anything..." className="w-full h-full bg-transparent dark:bg-transparent border-none shadow-none text-text-primary focus-visible:border-none focus-visible:ring-0 placeholder:text-text-primary/50" />
+       </div>
+       <div className="flex flex-row items-center justify-between gap-2 bg-surface-foreground/3 w-full px-3 py-2 rounded-b-sm shadow-sm">
+         <div className="flex gap-2 items-center">
+           <Button className="bg-transparent hover:bg-surface-foreground/5">
+             <Calendar className="text-text-primary"/>
+           </Button>
+           <Button className="bg-transparent hover:bg-surface-foreground/5">
+             <Bell className="text-text-primary"/>
+           </Button>
+         </div>
+         <Button size="sm" className="bg-primary-on hover:bg-primary-on active:bg-primary-foreground rounded-sm">
+           <p className="text-xs text-white dark:text-white">Add</p>
+         </Button>
+       </div>
+     </div>
+   </div>
   );
 }

@@ -71,7 +71,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   </Link>
                 </SidebarMenuButton>
                 {item.items?.length ? (
-                  <SidebarMenuSub className="border-primary-foreground">
+                  <SidebarMenuSub className="border-surface-foreground">
                     {item.items.map((item) => (
                       <SidebarMenuSubItem key={item.title}>
                         <SidebarMenuSubButton asChild isActive={item.isActive}>
