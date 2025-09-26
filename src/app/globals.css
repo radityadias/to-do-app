@@ -16,6 +16,8 @@
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-primary-accent: var(--primary-accent);
+  --color-primary-on: var(--primary-on);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);
@@ -39,6 +41,11 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-text-primary: var(--text-primary);
+  --color-surface-primary: var(--surface-primary);
+  --color-surface-foreground: var(--surface-foreground);
+  --color-surface-accent: var(--surface-accent);
 }
 
 :root {
@@ -49,8 +56,6 @@
   --card-foreground: oklch(0.13 0.028 261.692);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.13 0.028 261.692);
-  --primary: oklch(0.21 0.034 264.665);
-  --primary-foreground: oklch(0.985 0.002 247.839);
   --secondary: oklch(0.967 0.003 264.542);
   --secondary-foreground: oklch(0.21 0.034 264.665);
   --muted: oklch(0.967 0.003 264.542);
@@ -76,6 +81,21 @@
   --sidebar-ring: hsl(217.2 91.2% 59.8%);
 
   /* Custom Colors */
+
+  /* PRIMARY */
+  --primary: #E1F1FE;
+  --primary-foreground: #9CD1FC;
+  --primary-accent: #B0DAFD;
+  --primary-on: #508ABA;
+
+  /* SURFACE */
+  --surface-primary: #FAFAFA;
+  --surface-foreground: #011628;
+  --surface-accent: #032D50;
+
+  /* TEXT */
+  --text-primary: #1B1B1B;
+
   --white-primary: #F0F3FA;
   --white-foreground: #D5DEEF;
   --white-accent: #B1C9EF;
@@ -91,8 +111,6 @@
   --card-foreground: oklch(0.985 0.002 247.839);
   --popover: oklch(0.21 0.034 264.665);
   --popover-foreground: oklch(0.985 0.002 247.839);
-  --primary: oklch(0.928 0.006 264.531);
-  --primary-foreground: oklch(0.21 0.034 264.665);
   --secondary: oklch(0.278 0.033 256.848);
   --secondary-foreground: oklch(0.985 0.002 247.839);
   --muted: oklch(0.278 0.033 256.848);
@@ -118,21 +136,11 @@
   --sidebar-ring: hsl(217.2 91.2% 59.8%);
 
   /* Custom Colors */
-  --white-primary: #0F0C05;
-  --white-foreground: #2A2110;
-  --white-accent: #4E3610;
-  --blue-primary: #75511F;
-  --blue-foreground: #9C7134;
-  --blue-accent: #C6A779;
-}
-
-@theme {
-  --color-white-primary: var(--white-primary);
-  --color-white-foreground: var(--white-foreground);
-  --color-white-accent: var(--white-accent);
-  --color-blue-primary: var(--blue-primary);
-  --color-blue-foreground: var(--blue-foreground);
-  --color-blue-accent: var(--blue-accent);
+  --primary: #262626;
+  --primary-foreground: #0A0A0A;
+  --primary-accent: #171717;
+  --text-primary: #FAFAFA;
+  --surface-primary: #171717;
 }
 
 * {

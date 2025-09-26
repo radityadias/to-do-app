@@ -1,9 +1,7 @@
 'use client'
 
 import { MoonIcon, StarIcon } from "lucide-react";
-
-import { useState, useEffect } from "react"
-
+import { useState } from "react"
 import { Button } from "@/components/ui/button";
 
 export function ButtonDarkMode() {
@@ -15,13 +13,9 @@ export function ButtonDarkMode() {
         document.documentElement.classList.toggle('dark', newTheme === 'dark');
     }
 
-    useEffect(() => {
-
-    }, [theme]);
-
     return (
         <>
-            <Button size="icon" onClick={toggleDarkMode} className="bg-blue-foreground hover:bg-blue-foreground">
+            <Button size="icon" onClick={toggleDarkMode} className="bg-primary-foreground hover:bg-primary-accent dark:bg-[#212121] dark:hover:bg-[#262626]">
                 {
                     theme === 'light' ? (
                         <MoonIcon className="text-white" />

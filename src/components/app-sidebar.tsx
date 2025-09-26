@@ -19,10 +19,6 @@ import {
 const data = {
   navMain: [
     {
-      title: "Home",
-      url: "#",
-    },
-    {
       title: "Tasks",
       url: "#",
       items: [
@@ -47,7 +43,7 @@ const data = {
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar {...props}>
-      <SidebarHeader className="bg-blue-primary">
+      <SidebarHeader className="bg-primary">
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" className="hover:bg-transparent" asChild>
@@ -56,20 +52,20 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   <Image src="/to-do-list.png" width={32} height={32} alt="Logo"/>
                 </div>
                 <div className="flex flex-col gap-0.5 leading-none">
-                  <span className="font-bold">To Do App</span>
-                  <span className="">v1.0</span>
+                  <span className="font-bold text-text-primary">To Do App</span>
+                  <span className="text-text-primary/60">v1.0</span>
                 </div>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
-      <SidebarContent className="bg-blue-primary">
+      <SidebarContent className="bg-primary">
         <SidebarGroup>
           <SidebarMenu>
             {data.navMain.map((item) => (
               <SidebarMenuItem key={item.title}>
-                <SidebarMenuButton asChild className="hover:bg-blue-foreground hover:text-white-primary">
+                <SidebarMenuButton asChild className="text-text-primary hover:bg-primary-accent hover:text-text-primary">
                   <Link href={item.url} className="font-bold">
                     {item.title}
                   </Link>
