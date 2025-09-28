@@ -1,7 +1,11 @@
+'use client'
+
+import { useState } from "react";
+
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
-import { Calendar, Bell } from "lucide-react";
+import { Calendar, Bell, Circle, CircleCheck, Star } from "lucide-react";
 
 const data = [
   {
@@ -114,7 +118,28 @@ const taskData = [
 ]
 
 export default function Home() {
+  const [checked, setChecked] = useState(false);
+  const [taskOpen, setTaskOpen] = useState(false);
+  const [favourite, setFavourite] = useState(false);
+
   const currentDate = new Date().toDateString();
+
+  const handleChecked = () => {
+    setChecked(!checked);
+    console.log(checked);
+  }
+
+  const handleTaskWindow = () => {
+    setTaskOpen(!taskOpen);
+    console.log(taskOpen);
+  }
+
+  const handleFavourite = () => {
+    setFavourite(!favourite);
+    console.log(favourite);
+  }
+
+
 
   return (
    <div className="space-y-3">
@@ -162,6 +187,28 @@ export default function Home() {
          <Button size="sm" className="bg-primary-on hover:bg-primary-on active:bg-primary-foreground rounded-sm">
            <p className="text-xs text-white dark:text-white">Add</p>
          </Button>
+       </div>
+     </div>
+     <hr/>
+     <div className="flex flex-col justify-center items-stretch rounded-sm bg-surface-secondary hover:bg-surface-foreground/5 active:bg-primary dark:hover:bg-surface-foreground/10 dark:active:bg-primary-on shadow-sm w-full">
+       <div className="flex flex-row gap-2 items-center px-3 py-2 w-full">
+         <span className="flex items-center">
+           <button onClick={handleChecked}>
+             {
+               checked ? <Circle className="w-4 h-4 text-text-primary"/> : <CircleCheck className="w-4 h-4 text-text-primary"/>
+             }
+           </button>
+         </span>
+         <button onClick={handleTaskWindow} className="flex justify-start items-center w-full bg-transparent">
+           Task 1
+         </button>
+         <span className="flex items-center">
+           <button onClick={handleFavourite}>
+             {
+               favourite ? <Star className="w-4 h-4 text-primary-on dark:text-primary-on fill-primary-on"/> : <Star className="w-4 h-4 text-text-primary"/>
+             }
+           </button>
+         </span>
        </div>
      </div>
    </div>
